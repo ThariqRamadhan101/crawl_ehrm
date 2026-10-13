@@ -1,0 +1,95 @@
+Add new option filter all pegawai (1) it should be add by this filter
+Add
+NIP
+Nama
+Jabatan
+Status Pegawai
+Status Asal
+Status Ahkir
+This is the example
+
+fetch("https://ehrm.pu.go.id/api/pegawai/direktori", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9,id;q=0.8",
+    "authorization": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkU0QTBBRThBQjhGOTc4OEI0MzcwNkY0NDY3RUQ2MjA0NEM2NEFDNjkiLCJ4NXQiOiI1S0N1aXJqNWVJdERjRzlFWi0xaUJFeGtyR2siLCJ0eXAiOiJhdCtqd3QifQ.eyJpc3MiOiJodHRwczovL3Nzby5wdS5nby5pZC8iLCJleHAiOjE3ODk5NjA0NjQsImlhdCI6MTc4OTk1Njg2NCwic2NvcGUiOiJlbWFpbCBwcm9maWxlIHJvbGVzIG9mZmxpbmVfYWNjZXNzIiwianRpIjoiYzJhNGQyMjEtNTc4Zi00MTkzLWE2NjgtZTQ1ZDdmOGIwMDliIiwib2lfcHJzdCI6IkVocm0iLCJvaV9hdV9pZCI6IjIwYWQ1YzdlLWY3Y2MtNDYwZS05NzdiLTNkNzZhMzMwMjZmOSIsInN1YiI6IjE5NDI2OSIsImVtYWlsIjoicmFtYWRoYW4uYWxjaGFuZHJhLnlhc3JpYWxAcHUuZ28uaWQiLCJuYW1lIjoidGhhcmlxX3JhbWFkaGFuIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGhhcmlxX3JhbWFkaGFuIiwibmlwIjoiMTk5OTAxMDYyMDI1MDYxMDExIiwiY2xpZW50X2lkIjoiRWhybSIsIm9pX3Rrbl9pZCI6ImIzYzFkNmRlLTQ4OGMtNGNiNS1iNGEyLWI1NDZiODQ2NmE0OCJ9.I4p2x9TP6GkDZzEtnYgciYKhypuaCnvtzRELt3uEUOocsriX8wh2Nlcjio0A0XSfiV18JbQ6wJVdD34Bpw3TaOLV-X-bptg8j2DyEKi4Elku6y1fa3PAao4w4sXn_ibnp6vEgkRu9_K4U4iq1r0hr-EjQkN-dUhCTjkOXONsmvxY65m6r5cBWWqcWvl8hk7sVX3UkVxLPAPc7MKPvmWakXSzFPL5pSimeWnR1awTkYDXss2vshsIfi1J1_CQTDImpKY7E67nCCKNNZO3OwCnMo7AxDey48QPklvHc5cDL_MMVgtPSlZFeX52dIY7JHEJOYnnvsv35FhG7IClUP3wKw",
+    "content-type": "application/json",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Google Chrome\";v=\"152\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://ehrm.pu.go.id/info-pegawai?nama=&nip=&jabatan=Jawa+Barat&status_pegawai=22&status_asal=1,5,6&status_akhir=",
+  "body": "{\"nip\":\"\",\"nama\":\"\",\"jabatan\":\"Jawa Barat\",\"on_page\":1,\"page_size\":25,\"status_pegawai\":\"22\",\"status_asal\":\"1,5,6\"}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+
+The dynamic
+fetch("https://ehrm.pu.go.id/api/reference?q=status_asal", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9,id;q=0.8",
+    "authorization": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkU0QTBBRThBQjhGOTc4OEI0MzcwNkY0NDY3RUQ2MjA0NEM2NEFDNjkiLCJ4NXQiOiI1S0N1aXJqNWVJdERjRzlFWi0xaUJFeGtyR2siLCJ0eXAiOiJhdCtqd3QifQ.eyJpc3MiOiJodHRwczovL3Nzby5wdS5nby5pZC8iLCJleHAiOjE3ODk5NjA0NjQsImlhdCI6MTc4OTk1Njg2NCwic2NvcGUiOiJlbWFpbCBwcm9maWxlIHJvbGVzIG9mZmxpbmVfYWNjZXNzIiwianRpIjoiYzJhNGQyMjEtNTc4Zi00MTkzLWE2NjgtZTQ1ZDdmOGIwMDliIiwib2lfcHJzdCI6IkVocm0iLCJvaV9hdV9pZCI6IjIwYWQ1YzdlLWY3Y2MtNDYwZS05NzdiLTNkNzZhMzMwMjZmOSIsInN1YiI6IjE5NDI2OSIsImVtYWlsIjoicmFtYWRoYW4uYWxjaGFuZHJhLnlhc3JpYWxAcHUuZ28uaWQiLCJuYW1lIjoidGhhcmlxX3JhbWFkaGFuIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGhhcmlxX3JhbWFkaGFuIiwibmlwIjoiMTk5OTAxMDYyMDI1MDYxMDExIiwiY2xpZW50X2lkIjoiRWhybSIsIm9pX3Rrbl9pZCI6ImIzYzFkNmRlLTQ4OGMtNGNiNS1iNGEyLWI1NDZiODQ2NmE0OCJ9.I4p2x9TP6GkDZzEtnYgciYKhypuaCnvtzRELt3uEUOocsriX8wh2Nlcjio0A0XSfiV18JbQ6wJVdD34Bpw3TaOLV-X-bptg8j2DyEKi4Elku6y1fa3PAao4w4sXn_ibnp6vEgkRu9_K4U4iq1r0hr-EjQkN-dUhCTjkOXONsmvxY65m6r5cBWWqcWvl8hk7sVX3UkVxLPAPc7MKPvmWakXSzFPL5pSimeWnR1awTkYDXss2vshsIfi1J1_CQTDImpKY7E67nCCKNNZO3OwCnMo7AxDey48QPklvHc5cDL_MMVgtPSlZFeX52dIY7JHEJOYnnvsv35FhG7IClUP3wKw",
+    "content-type": "application/json",
+    "if-none-match": "W/\"980-t7rtxqmksMPuIv8xphcvnUmTfIM\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Google Chrome\";v=\"152\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://ehrm.pu.go.id/info-pegawai?nama=&nip=&jabatan=Jawa+Barat&status_pegawai=22&status_asal=1,5,6&status_akhir=",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+});
+fetch("https://ehrm.pu.go.id/api/reference?q=status_akhir", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9,id;q=0.8",
+    "authorization": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkU0QTBBRThBQjhGOTc4OEI0MzcwNkY0NDY3RUQ2MjA0NEM2NEFDNjkiLCJ4NXQiOiI1S0N1aXJqNWVJdERjRzlFWi0xaUJFeGtyR2siLCJ0eXAiOiJhdCtqd3QifQ.eyJpc3MiOiJodHRwczovL3Nzby5wdS5nby5pZC8iLCJleHAiOjE3ODk5NjA0NjQsImlhdCI6MTc4OTk1Njg2NCwic2NvcGUiOiJlbWFpbCBwcm9maWxlIHJvbGVzIG9mZmxpbmVfYWNjZXNzIiwianRpIjoiYzJhNGQyMjEtNTc4Zi00MTkzLWE2NjgtZTQ1ZDdmOGIwMDliIiwib2lfcHJzdCI6IkVocm0iLCJvaV9hdV9pZCI6IjIwYWQ1YzdlLWY3Y2MtNDYwZS05NzdiLTNkNzZhMzMwMjZmOSIsInN1YiI6IjE5NDI2OSIsImVtYWlsIjoicmFtYWRoYW4uYWxjaGFuZHJhLnlhc3JpYWxAcHUuZ28uaWQiLCJuYW1lIjoidGhhcmlxX3JhbWFkaGFuIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGhhcmlxX3JhbWFkaGFuIiwibmlwIjoiMTk5OTAxMDYyMDI1MDYxMDExIiwiY2xpZW50X2lkIjoiRWhybSIsIm9pX3Rrbl9pZCI6ImIzYzFkNmRlLTQ4OGMtNGNiNS1iNGEyLWI1NDZiODQ2NmE0OCJ9.I4p2x9TP6GkDZzEtnYgciYKhypuaCnvtzRELt3uEUOocsriX8wh2Nlcjio0A0XSfiV18JbQ6wJVdD34Bpw3TaOLV-X-bptg8j2DyEKi4Elku6y1fa3PAao4w4sXn_ibnp6vEgkRu9_K4U4iq1r0hr-EjQkN-dUhCTjkOXONsmvxY65m6r5cBWWqcWvl8hk7sVX3UkVxLPAPc7MKPvmWakXSzFPL5pSimeWnR1awTkYDXss2vshsIfi1J1_CQTDImpKY7E67nCCKNNZO3OwCnMo7AxDey48QPklvHc5cDL_MMVgtPSlZFeX52dIY7JHEJOYnnvsv35FhG7IClUP3wKw",
+    "content-type": "application/json",
+    "if-none-match": "W/\"c81-8rYOBAWm7hE1c8iLfdIC25Vm82I\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Google Chrome\";v=\"152\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://ehrm.pu.go.id/info-pegawai?nama=&nip=&jabatan=Jawa+Barat&status_pegawai=22&status_asal=1,5,6&status_akhir=",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+});
+fetch("https://ehrm.pu.go.id/api/reference?q=status_pegawai", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9,id;q=0.8",
+    "authorization": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkU0QTBBRThBQjhGOTc4OEI0MzcwNkY0NDY3RUQ2MjA0NEM2NEFDNjkiLCJ4NXQiOiI1S0N1aXJqNWVJdERjRzlFWi0xaUJFeGtyR2siLCJ0eXAiOiJhdCtqd3QifQ.eyJpc3MiOiJodHRwczovL3Nzby5wdS5nby5pZC8iLCJleHAiOjE3ODk5NjA0NjQsImlhdCI6MTc4OTk1Njg2NCwic2NvcGUiOiJlbWFpbCBwcm9maWxlIHJvbGVzIG9mZmxpbmVfYWNjZXNzIiwianRpIjoiYzJhNGQyMjEtNTc4Zi00MTkzLWE2NjgtZTQ1ZDdmOGIwMDliIiwib2lfcHJzdCI6IkVocm0iLCJvaV9hdV9pZCI6IjIwYWQ1YzdlLWY3Y2MtNDYwZS05NzdiLTNkNzZhMzMwMjZmOSIsInN1YiI6IjE5NDI2OSIsImVtYWlsIjoicmFtYWRoYW4uYWxjaGFuZHJhLnlhc3JpYWxAcHUuZ28uaWQiLCJuYW1lIjoidGhhcmlxX3JhbWFkaGFuIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGhhcmlxX3JhbWFkaGFuIiwibmlwIjoiMTk5OTAxMDYyMDI1MDYxMDExIiwiY2xpZW50X2lkIjoiRWhybSIsIm9pX3Rrbl9pZCI6ImIzYzFkNmRlLTQ4OGMtNGNiNS1iNGEyLWI1NDZiODQ2NmE0OCJ9.I4p2x9TP6GkDZzEtnYgciYKhypuaCnvtzRELt3uEUOocsriX8wh2Nlcjio0A0XSfiV18JbQ6wJVdD34Bpw3TaOLV-X-bptg8j2DyEKi4Elku6y1fa3PAao4w4sXn_ibnp6vEgkRu9_K4U4iq1r0hr-EjQkN-dUhCTjkOXONsmvxY65m6r5cBWWqcWvl8hk7sVX3UkVxLPAPc7MKPvmWakXSzFPL5pSimeWnR1awTkYDXss2vshsIfi1J1_CQTDImpKY7E67nCCKNNZO3OwCnMo7AxDey48QPklvHc5cDL_MMVgtPSlZFeX52dIY7JHEJOYnnvsv35FhG7IClUP3wKw",
+    "content-type": "application/json",
+    "if-none-match": "W/\"9ec-k2Wd7N4OtzYKAj9QnAj3FCXPnD8\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Google Chrome\";v=\"152\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://ehrm.pu.go.id/info-pegawai?nama=&nip=&jabatan=Jawa+Barat&status_pegawai=22&status_asal=1,5,6&status_akhir=",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+});
